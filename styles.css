@@ -14,12 +14,21 @@ body {
 
 header {
   text-align: center;
+  margin: 0 10px;
+}
+
+.search {
+  border: 1px solid red;
 }
 
 .results {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#searchText {
+  flex-basis: 100%;
 }
 
 .test {
@@ -46,4 +55,17 @@ header {
   flex: 1;
   margin: 0;
   text-align: center;
+}
+
+.player {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  width: 100vw;
+}
+
+.music-player {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
