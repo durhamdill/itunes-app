@@ -39,6 +39,12 @@ function itunesSearch() {
         response.json().then(function(data) {
           console.log(data.results.length);
           console.log(data.results);
+          let results = document.querySelector(".results");
+          results.innerHTML= "";
+
+          if (data.results.length===0){
+            searchText.innerHTML=`<p>Sorry, your search for "${input}" did not return any results. Try again!</p>`
+          }
 
         })
       }
