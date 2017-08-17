@@ -24,7 +24,6 @@ function itunesSearch() {
   let searchUrl = url + term + searchSongs;
   console.log(searchUrl);
   // console.log(searchUrl);
-  searchText.innerHTML=`Search results for "${input}":`;
 
   fetch(searchUrl)
     .then(
@@ -45,6 +44,22 @@ function itunesSearch() {
           if (data.results.length===0){
             searchText.innerHTML=`<p>Sorry, your search for "${input}" did not return any results. Try again!</p>`
           }
+          else {
+            searchText.innerHTML=`Search results for "${input}":`;
+            data.results.map((song)=>{
+              // if (song.thumbnail==="") {
+              //   recipe.thumbnail = "http://www.foodista.com/sites/default/files/default_images/placeholder_rev.png";
+              //   console.log(recipe.title);
+              // }
+              results.innerHTML += `
+              <div class="test">
+                <img class="image" src="${song.artworkUrl100}">
+                <h1>${song.artistName}</h1>
+                <p>${song.trackName}</p>
+              </div>
+              `
+        });
+      }
 
         })
       }
