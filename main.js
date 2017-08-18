@@ -8,9 +8,10 @@ let url = "https://itunes.apple.com/search?term=";
 
 let submitbutton = document.getElementById("submitbutton");
 
-let searchSongs = "&entity=song&limit=10";
+let searchSongs = "&entity=song&limit=100";
 
 let searchText = document.getElementById("searchText");
+
 
 // 2. Create your `submit` event for getting the user's search term
 
@@ -47,15 +48,11 @@ function itunesSearch() {
           else {
             searchText.innerHTML=`Search results for "${input}":`;
             data.results.map((song)=>{
-              // if (song.thumbnail==="") {
-              //   recipe.thumbnail = "http://www.foodista.com/sites/default/files/default_images/placeholder_rev.png";
-              //   console.log(recipe.title);
-              // }
               results.innerHTML += `
               <div class="test">
-                <img class="image" src="${song.artworkUrl100}">
-                <h1>${song.artistName}</h1>
-                <p>${song.trackName}</p>
+                <img class="image" src="${song.artworkUrl100}" value="${song.previewUrl}">
+                <h2 value="${song.previewUrl}">${song.trackName}</h2>
+                <p value="${song.previewUrl}">${song.artistName}</p>
               </div>
               `
         });
@@ -68,3 +65,18 @@ function itunesSearch() {
 // 3. Create your `fetch` request that is called after a submission
 // 4. Create a way to append the fetch results to your page
 // 5. Create a way to listen for a click that will play the song in the audio play
+
+let results = document.querySelector(".results");
+let musicPlayer = document.querySelector(".music-player");
+results.addEventListener("click", playSong, false);
+
+  function playSong(e) {
+    if (e.target !== e.currentTarget) {
+        // var clickedItem = e.target.id;
+        // alert("Hello " + clickedItem);
+        console.log(e.target);
+    }
+    e.stopPropagation();
+}
+
+// console.log(data.results);

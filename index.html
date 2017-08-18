@@ -3,31 +3,39 @@
 <head>
   <title>iTunes Music Search</title>
   <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Permanent+Marker" rel="stylesheet">
 </head>
 <body>
 
   <div class="container">
 
+    <div class="fixedTop">
+
+      <section class="search">
+        <form class="search-form">
+          <label for="searchbox">Search:</label>
+          <input type="search" id="searchbox" name="" value="">
+          <!-- <button type="button" name="submit">Submit</button> -->
+          <!-- <input type="submit"> -->
+          <button type="button" name="submitbutton" id="submitbutton">Submit</button>
+        </form>
+        <p id="searchText">Test</p>
+      </section>
+
+    </div>
+
     <header>
-      <h1>Really Awesome Music Site</h1>
+      <h1>Found Sounds</h1>
+      <!-- <h2>Find Your Next Favorite Song</h2> -->
     </header>
 
-    <section class="search">
-      <form class="search-form">
-        <label for="searchbox">Search:</label>
-        <input type="search" id="searchbox" name="" value="">
-        <!-- <button type="button" name="submit">Submit</button> -->
-        <!-- <input type="submit"> -->
-        <button type="button" name="submitbutton" id="submitbutton">Submit</button>
-      </form>
-      <p id="searchText">Test</p>
-    </section>
+
 
     <section class="results">
 
       <div class="test">
         <div class="image"></div>
-        <h1>Artist Name</h1>
+        <h2>Artist Name</h2>
         <p>Title</p>
       </div>
       <div class="test"></div>

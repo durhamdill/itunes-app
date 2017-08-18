@@ -1,24 +1,57 @@
+/*font-family: 'Oswald', sans-serif;
+font-family: 'Permanent Marker', cursive;*/
+
 body {
   background-color: #60d9f1;
+  background-image: url("images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  /*width: 100vw;*/
+  /*position: fixed;*/
+  right: -40px;
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-size: 1em;
+  padding: 0 2px;
+  color: #F7DC78;
+}
+
+p {
+  font-family: 'Oswald', sans-serif;
+  font: 8px;
+  font-weight: 200;
+  padding: 0 2px;
+  color: white;
 }
 
 .container {
-  /*margin: 0 auto;*/
-  width: 100vw;
-  height: 100vh;
+  margin: 0 auto;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
 }
 
-
+.fixedTop {
+  position: absolute;
+  width: 100vw;
+}
 
 header {
   text-align: center;
-  margin: 0 10px;
+  margin: 0;
+  padding: 1px 0;
+  font-family: 'Permanent Marker', sans-serif;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
 }
 
 .search {
   border: 1px solid red;
+  position: relative;
+  top: -20;
 }
 
 .results {
@@ -27,41 +60,42 @@ header {
   justify-content: center;
 }
 
-#searchText {
-  flex-basis: 100%;
-}
-
 .test {
-  border: 1px solid black;
-  width: 150px;
-  height: 200px;
+  /*border: 1px solid black;*/
+  flex-basis: 150px;
   margin: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.7);
+  /*display: grid;*/
+  /*grid-template-columns: 1fr;*/
+  /*grid-template-rows: 5fr 2fr 2fr;*/
+  /*flex-direction: column;*/
+  /*justify-content: space-between;*/
 }
 
 .image {
-  /*width: 150px;*/
-  /*height: 150px;*/
-  flex: 5;
-  border: 1px solid red;
+  height: 150px;
+  /*flex: 5;*/
+  /*border: 1px solid red;*/
   margin: 0;
   background-color: red;
 }
 
-.test h1, .test p {
-  border: 1px solid red;
+.test h1, .test h2, .test p {
+  /*border: 1px solid red;*/
   flex: 1;
   margin: 0;
   text-align: center;
+  /*color: white;*/
 }
 
 .player {
   position: fixed;
   bottom: 0;
+  margin-top: 50px;
   margin-bottom: 0;
+  /*padding: 20px;*/
   width: 100vw;
+  /*height: 80px;*/
 }
 
 .music-player {
