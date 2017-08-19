@@ -68,6 +68,29 @@ header {
   text-align: center;
 }
 
+input#searchbox {
+  border-radius: 0;
+  font-size: .9em;
+  font-weight: 200;
+  margin-right: -4px;
+  height: 24px;
+  padding-left: 8px;
+  width: 150px;
+  font-family: 'Oswald', sans-serif;
+  /*border: 1px solid red;*/
+}
+
+#submitbutton {
+  border-radius: 0 5px 5px 0;
+  background-color: #1E2B33;
+  border: 0;
+  height: 28px;
+  font-family: 'Oswald', sans-serif;
+  font-size:.9em;
+  padding: 0 8px;
+  color: #F7DC78;
+}
+
 .results {
   display: flex;
   flex-wrap: wrap;
