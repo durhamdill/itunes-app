@@ -105,6 +105,11 @@ input#searchbox {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
+.test:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  border: 2px solid #F7DC78;
+}
+
 .image {
   height: 150px;
   margin: 0;
