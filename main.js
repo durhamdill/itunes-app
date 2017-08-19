@@ -8,9 +8,11 @@ let url = "https://itunes.apple.com/search?term=";
 
 let submitbutton = document.getElementById("submitbutton");
 
-let searchSongs = "&entity=song&limit=100";
+let searchSongs = "&entity=song&limit=10";
 
 let searchText = document.getElementById("searchText");
+
+let songArray = [];
 
 
 // 2. Create your `submit` event for getting the user's search term
@@ -19,12 +21,10 @@ submitbutton.addEventListener("click", itunesSearch);
 
 function itunesSearch() {
   let input = document.getElementById("searchbox").value;
-  console.log(input);
   let term = input.split(' ').join('+');
-  console.log(term);
+  console.log("search term: " + term);
   let searchUrl = url + term + searchSongs;
-  console.log(searchUrl);
-  // console.log(searchUrl);
+  console.log("search url: " + searchUrl);
 
   fetch(searchUrl)
     .then(
@@ -39,7 +39,7 @@ function itunesSearch() {
         response.json().then(function(data) {
           console.log(data.results.length);
           console.log(data.results);
-          let results = document.querySelector(".results");
+          results = document.querySelector(".results");
           results.innerHTML= "";
 
           if (data.results.length===0){
@@ -47,36 +47,44 @@ function itunesSearch() {
           }
           else {
             searchText.innerHTML=`Search results for "${input}":`;
-            data.results.map((song)=>{
+            // data.results.map((song)=>
+            for (let i=0; i<data.results.length; i++){
+              songArray.push(data.results[i].previewUrl);
               results.innerHTML += `
-              <div class="test">
-                <img class="image" src="${song.artworkUrl100}" value="${song.previewUrl}">
-                <h2 value="${song.previewUrl}">${song.trackName}</h2>
-                <p value="${song.previewUrl}">${song.artistName}</p>
+              <div class="test" id=${i} onclick=playSong()>
+                <img class="image" src="${data.results[i].artworkUrl100}" value="${data.results[i].previewUrl}">
+                <h2>${data.results[i].trackName}</h2>
+                <p>${data.results[i].artistName}</p>
               </div>
               `
-        });
-      }
 
+            };
+          }
+          // let songBox=document.getElementsByClassName("test");
+          // songBox.addEventListener("click", playSong, false);
+          console.log("array of songUrls: " + songArray);
         })
       }
       )
     }
+
 // 3. Create your `fetch` request that is called after a submission
 // 4. Create a way to append the fetch results to your page
 // 5. Create a way to listen for a click that will play the song in the audio play
 
-let results = document.querySelector(".results");
+// let results = document.querySelector(".results");
 let musicPlayer = document.querySelector(".music-player");
-results.addEventListener("click", playSong, false);
+// results.addEventListener("click", playSong, false);
 
-  function playSong(e) {
-    if (e.target !== e.currentTarget) {
-        // var clickedItem = e.target.id;
-        // alert("Hello " + clickedItem);
-        console.log(e.target);
-    }
-    e.stopPropagation();
+//   function playSong(e) {
+//     if (e.target !== e.currentTarget) {
+//         // var clickedItem = e.target.id;
+//         // alert("Hello " + clickedItem);
+//         console.log(target);
+//     }
+//     e.stopPropagation();
+// }
+
+function playSong() {
+  console.log(this.id);
 }
-
-// console.log(data.results);
