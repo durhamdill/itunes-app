@@ -132,8 +132,18 @@ input#searchbox {
 
 #nowPlayText {
   padding-left: 10px;
+  display: inline-block;
 }
 
 .music-player {
   width: 100vw;
+}
+
+#itunesCredit {
+  float: right;
+  margin-right: 15px;
+}
+
+a {
+  color: #F7DC78;
 }
