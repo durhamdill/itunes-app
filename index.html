@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>iTunes Music Search</title>
+  <title>Found Sounds</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Oswald:300,400|Permanent+Marker" rel="stylesheet">
 </head>
 <body>
@@ -11,25 +12,23 @@
 
     <div class="fixedTop">
 
+      <header>
+        <img id="record" src="images/record-icon.png" alt="">
+        <h1>Found Sounds</h1>
+      </header>
+
       <section class="search">
         <form class="search-form">
-          <label for="searchbox">Search:</label>
-          <input type="search" id="searchbox" name="" value="">
+          <label for="searchbox">Find a song:</label>
+          <input type="search" id="searchbox" name="" placeholder="Enter artist, song, or keyword">
           <!-- <button type="button" name="submit">Submit</button> -->
           <!-- <input type="submit"> -->
-          <button type="button" name="submitbutton" id="submitbutton">Submit</button>
+          <button type="button" name="submitbutton" id="submitbutton">Search</button>
         </form>
-        <p id="searchText">Test</p>
+        <!-- <p id="searchText">Test</p> -->
       </section>
 
     </div>
-
-    <header>
-      <h1>Found Sounds</h1>
-      <!-- <h2>Find Your Next Favorite Song</h2> -->
-    </header>
-
-
 
     <section class="results">
 
@@ -50,6 +49,7 @@
     </section>
 
     <section class="player">
+      <p id="nowPlayText"></p>
       <audio class="music-player" controls="controls" src=""></audio>
     </section>
 

@@ -35,8 +35,10 @@ p {
 }
 
 .fixedTop {
-  position: absolute;
   width: 100vw;
+  position: fixed;
+  top: 0px;
+  left: 0px;
 }
 
 header {
@@ -46,18 +48,38 @@ header {
   font-family: 'Permanent Marker', sans-serif;
   background-color: rgba(0, 0, 0, 0.7);
   color: white;
+  /*border: 1px solid blue;*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#record {
+  float: left;
+  /*border: 1px solid red;*/
+  height: 40px;
+  padding: 10px;
 }
 
 .search {
-  border: 1px solid red;
+  background-color: rgba(245,215,83, 0.7);
+  padding: 10px;
   position: relative;
   top: -20;
+  /*border: 1px solid blue;*/
+}
+
+.search-form {
+  /*border: 1px solid red;*/
+  text-align: center;
 }
 
 .results {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 90px;
 }
 
 .test {
@@ -77,7 +99,7 @@ header {
   /*flex: 5;*/
   /*border: 1px solid red;*/
   margin: 0;
-  background-color: red;
+  background-color: #F7DC78;
 }
 
 .test h1, .test h2, .test p {
@@ -91,11 +113,14 @@ header {
 .player {
   position: fixed;
   bottom: 0;
-  margin-top: 50px;
-  margin-bottom: 0;
-  /*padding: 20px;*/
+  padding-top: 10px;
+  padding-bottom: 10px;
   width: 100vw;
-  /*height: 80px;*/
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+#nowPlayText {
+  padding-left: 10px;
 }
 
 .music-player {
