@@ -2,7 +2,7 @@
 font-family: 'Permanent Marker', cursive;*/
 
 body {
-  background-color: #60d9f1;
+  background-color: #6797B2;
   background-image: url("images/background.jpg");
   background-repeat: repeat;
   background-size: cover;
@@ -131,19 +131,47 @@ input#searchbox {
 }
 
 #nowPlayText {
-  padding-left: 10px;
-  display: inline-block;
+  padding: 0 10px;
 }
 
 .music-player {
   width: 100vw;
 }
 
-#itunesCredit {
-  float: right;
-  margin-right: 15px;
-}
-
 a {
   color: #F7DC78;
+}
+
+@media screen and ( min-width: 300px ){
+
+    .player {
+      text-align: center;
+    }
+
+    #nowPlayText {
+      margin: 0;
+    }
+
+    #itunesCredit {
+      margin: 0 0 5px 0;
+    }
+}
+
+@media screen and ( min-width: 670px ){
+
+    .player {
+      text-align: left;
+    }
+
+    #nowPlayText {
+      /*padding-left: 10px;*/
+      display: inline-block;
+      padding: 10px;
+    }
+
+    #itunesCredit {
+      float: right;
+      margin-right: 15px;
+      padding: 10px;
+    }
 }
