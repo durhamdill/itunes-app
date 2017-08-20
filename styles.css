@@ -1,5 +1,9 @@
-/*font-family: 'Oswald', sans-serif;
-font-family: 'Permanent Marker', cursive;*/
+/* STYLES:
+font-family: 'Oswald', sans-serif;
+font-family: 'Permanent Marker', cursive;
+yellow: #F7DC78;
+transparent black: rgba(0, 0, 0, 0.7);
+*/
 
 body {
   background-color: #59B3BA;
@@ -77,7 +81,6 @@ input#searchbox {
   padding-left: 8px;
   width: 150px;
   font-family: 'Oswald', sans-serif;
-  /*border: 1px solid red;*/
 }
 
 #submitbutton {
@@ -142,6 +145,8 @@ a {
   color: #F7DC78;
 }
 
+/*------FOOTER STYLES/SIZING FOR MOBILE-----*/
+
 @media screen and ( min-width: 300px ){
 
     .player {
@@ -157,6 +162,8 @@ a {
     }
 }
 
+/*------FOOTER STYLES/SIZING FOR TABLET/DESKTOP-----*/
+
 @media screen and ( min-width: 670px ){
 
     .player {
@@ -164,7 +171,6 @@ a {
     }
 
     #nowPlayText {
-      /*padding-left: 10px;*/
       display: inline-block;
       padding: 10px;
     }
